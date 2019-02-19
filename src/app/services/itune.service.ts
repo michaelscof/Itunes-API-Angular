@@ -4,10 +4,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ItuneService {
-  find(){
+  find(name:string){
     //ajax
     console.log('find called');
-    var observable=this.http.get('https://itunes.apple.com/search?term=enrique+iglesias&limit=3');
+    var observable=this.http.get('https://itunes.apple.com/search?term='+name+'&limit=3');
     return observable;
   }
   constructor(private http:HttpClient) { }

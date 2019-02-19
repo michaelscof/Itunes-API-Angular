@@ -8,8 +8,9 @@ import { observable } from 'rxjs';
 })
 export class ItunesSearchComponent implements OnInit { 
   tracks=[];
+  name:string;
   search(){
-    var observable=this.service.find();
+    var observable=this.service.find(this.name);
     observable.subscribe((response)=>{
       this.tracks=response.results; 
     });

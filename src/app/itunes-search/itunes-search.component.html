@@ -1,4 +1,4 @@
-<input>
+<input [(ngModel)]='name'>
 <button (click)="search()">Search</button>
 <ol>
     <li *ngFor="let track of tracks">{{track.trackName}}</li>
