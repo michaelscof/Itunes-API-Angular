@@ -1,0 +1,9 @@
+  <input [(ngModel)]='user.fName' placeholder="Name">
+  <input [(ngModel)]='user.age' placeholder="Age" type="number">
+  <input [(ngModel)]='user.salary' placeholder="Salary" type="number">
+  <input [(ngModel)]='user.gender' type="radio" value="Male">Male
+  <input [(ngModel)]='user.gender' type="radio" value="Female">Female
+  <button (click)="save()">Search</button>
+  <ol>
+    <li *ngFor="let user of users">{{user.fName +" "+ user.age +" "+ user.salary +" "+ user.gender}}</li>
+  </ol>
